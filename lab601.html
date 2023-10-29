@@ -32,6 +32,26 @@
       #wildlifebiologyclasses { background-color: #fc9928; }
       
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script>
+      // This is where I put my javascript 
+      // Do this when we click on the clicktoreveal1 button
+      $("#clicktoreveal1").click(function() {//run this when I click on this button $("clicktoreveal1").html("Additional BIO credits to achieve the minimum number of botany credits required to be a federal Wildlife Biologist.");});
+        
+      //Do this when we click on the clicktoreveal2 button
+      $("clicktoreveal2").click(function() {//run this when I click on this button $("clicktoreveal2").html("Required to finish the GIS minor/certificate.");}); 
+
+      //Do this when we click on the clicktoreveal3 button
+      $("clicktoreveal3").click(function() {//run this when I click on this button $("clicktoreveal3").html("Required to finish the GIS minor/certificate.");}); 
+
+      //Do this when we click on the clicktoreveal4 button
+      $("clicktoreveal4").click(function() {//run this when I click on this button $("clicktoreveal4").html("Addional BIO credit to show my position as Teacher's Assistant for Animal Ecology on my transcript.");}); 
+
+      //Do this when we click on the clicktoreveal5 button
+      $("clicktoreveal5").click(function() {//run this when I click on this button $("clicktoreveal5").html("Additional BIO credit to show my position as an Undergraduate Research Assistant on my transcript.");}); 
+    </script>
+    
   </head>
   <body>
   <div id="container">  
@@ -85,27 +105,27 @@
         <tr>
           <td>Vascular Plant Taxonomy</td>
           <td>4</td>
-          <td>Additional BIO credits to achieve the minimum number of botany credits required to be a federal Wildlife Biologist.</td>
+          <td><button id="clicktoreveal1">Why would I take this class?</button></td>
         </tr>
         <tr>
           <td>Cartography</td>
           <td>3</td>
-          <td>Required to finish the GIS minor/certificate.</td>
+          <td><button id="clicktoreveal2">Why am I taking this class?</button></td>
         </tr>
         <tr>
           <td>Web Mapping</td>
           <td>3</td>
-          <td>Required to finish the GIS minor/certificate.</td>
+          <td><button id="clicktoreveal3">What is this class required for?</button></td>
         </tr>
         <tr>
           <td>Internship in Biology</td>
           <td>1</td>
-          <td>Addional BIO credit to show my position as Teacher's Assistant for Animal Ecology on my transcript.</td>
+          <td><button id="clicktoreveal4">Why a one credit internship?</button></td>
         </tr>
         <tr>
           <td>Undergraduate Research in Biology</td>
           <td>1</td>
-          <td>Additional BIO credit to show my position as an Undergraduate Research Assistant on my transcript.</td>
+          <td><button id="clicktoreveal5">Is this even a class?</button></td>
         </tr>
       </table>
   </div>
