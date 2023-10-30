@@ -80,6 +80,13 @@
           console.log("clicked on the photo button");
           $("#CR1").fadeToggle();
         });
+
+        // Hidden text appears
+        $("#appear").click(function() {
+          // run this when I click on this button
+          console.log("clicked on the hidden text button");
+          $("#hidden_text").text("I graduate on the December 15, 2023!");
+        });
         
       }); //closing document ready.
     </script>
@@ -128,7 +135,11 @@
       </div>
     </ul>
 
-    <h2>I am graduating on the 15th of December, 2023! To finish my degree, I have to pass the following classes:</h2>
+    <h2>To finish my degree and certificate, I have to pass the following classes:</h2>
+      <div id="hidden_text">
+        <button id="appear">Click here to see when I graduate!</button>
+      </div>
+    
       <table id="classes to pass">
         <tr>
           <th>Class Name</th>
