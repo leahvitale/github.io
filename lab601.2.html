@@ -69,6 +69,12 @@
         $("#div_c5").html("1");
       }); 
 
+        // Toggle the photo on and off
+        $("#togglephoto").click(function() {
+          // run this when I click on this button 
+          $("#CR1").fadeToggle();
+        });
+        
       }); //closing document ready.
     </script>
     
@@ -112,6 +118,7 @@
       <p class="caption">Bird banding in Costa Rica.</p>
       <p class="caption">Photo by Rory van Lieu, 24 May 2022.</p>
       <p class="caption">MSU Denver students can discover Study Abroad programs like this and others through the <a href="https://www.msudenver.edu/international-studies/go-abroad/programs/"> Student Study Abroad Program Options! </a> </p>
+      <button id="togglephoto">Toggle the photo on/off.</button>
       </div>
     </ul>
 
