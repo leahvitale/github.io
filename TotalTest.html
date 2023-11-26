@@ -30,19 +30,14 @@
 	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
+
+	var circle = L circle([43.764481, -110.750417], {
+		color: 'red', 
+		fillColor: '#f03', 
+		fillOpacity: 0.05, 
+		radius: 500, 
+	}) addTo(map); 
 	
-	var marker = L.marker([44.211868, -110.668197]).addTo(map);
-
-	var circle = L.circle([43.764481, -110.750417‎], {
-   	 color: 'red',
-   	 fillColor: '#f03',
-   	 fillOpacity: 0.5,
-   	 radius: 500
-	}).addTo(map); 
-
-	var polygon = L.polygon([
-   		
-	]).addTo(map);
 	
 	
 	</script>
