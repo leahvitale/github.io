@@ -72,7 +72,14 @@
 
 	function onMapClick(e) { alert("You clicked the map at " + e.latlng);}
 		map.on('click', onMapClick);
-	
+
+	var popup = L.popup(); 
+		function on MapClick(e) {popup
+			.setLatlng(e.latlng)
+			.setContent("You clicked the map at " + e.latlng.toString())
+			.openOn(map);}
+		map.on('click', onMapClick);
+		
 	</script>
 </body>	
 </html>
