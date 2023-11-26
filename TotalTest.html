@@ -70,6 +70,9 @@
 	
 	polygon2.bindPopup("<b>Location 2:</b> <br> This is our second research site."); 
 
+	function onMapClick(e) { alert("You clicked the map at " + e.latlng);}
+		map.on('click', onMapClick);
+	
 	</script>
 </body>	
 </html>
