@@ -56,17 +56,19 @@
 		[43.762763, -110.747956]
 	]).addTo(map); 
 
-	var marker = L.marker([43.764802, -110.750053]).addTo(map); 
+	var marker1 = L.marker([43.764802, -110.750053]).addTo(map); 
 
-	var marker = L.marker([43.762983, -110.747533]).addTo(map);
+	var marker2 = L.marker([43.762983, -110.747533]).addTo(map);
 
-	marker.bindPopup("<b>Visual Confirmation!</b> <br> This is where we made our first visual confirmation of Pika and were alble to begin our research at each site."); 
+	marker1.bindPopup("<b>Visual Confirmation:</b> <br> This is where we made our first visual confirmation of Pika and were able to begin our research at Location 1."); 
+
+	marker2.bindPopup("<b>Visual Confirmation:</b> <br> This is where we made our first visual confirmation of Pika and were able to begin our research at Location 2."); 
 
 	circle.bindPopup("<b>Pika Sightings!</b> <br> iNaturalist informed us that Pika could be found in the rocky landslides around Inspiration Point in Grand Teton National Park.").openPopup(); 
 		
-	polygon1.bindPopup("<b>Research Sites!</b> <br> These are the loctaions where we took our data points after visual confirmation of Pika."); 
+	polygon1.bindPopup("<b>Location 1:</b> <br> This is our first research site."); 
 	
-	polygon2.bindPopup("<b>Research Sites!</b> <br> These are the loctaions where we took our data points after visual confirmation of Pika."); 
+	polygon2.bindPopup("<b>Location 2:</b> <br> This is our second research site."); 
 
 	</script>
 </body>	
