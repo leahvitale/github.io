@@ -25,17 +25,15 @@
 	
 	<script>
 
-	var map = L.map('map').setView([43.763795, -110.748691], 13);
+	var map = L.map('map').setView([43.763795, -110.748691], 25);
 		
 	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 
 	var circle = L.circle([43.767266, -110.748420], {
-		color: 'red', 
-		fillColor: '#f03', 
-		fillOpacity: 0.05, 
-		radius: 500
+		color: 'red',  
+		radius: 1000
 	}).addTo(map); 
 
 	
