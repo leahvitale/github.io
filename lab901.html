@@ -105,8 +105,8 @@
 				acsDenver2021Layer = L.geoJSON(data, 
 							       {style: style1, 
 							       onEachFeature: function(feature, layer){
-							       			layer.bindPopup("Number of Undergraduate College Students: " + 
-												feature.properties.COLLEGE_UNDERGRADUATE + ' students');
+							       			layer.bindPopup(feature.properties.COLLEGE_UNDERGRADUATE 
+												+ " Undergraduate Students");
 							       			}
 							       }).addTo(map); 
 
