@@ -77,7 +77,25 @@
 
 		//function to style my choropleth map
 			function style1(feature) { 
+				d = feature.properties.COLLEGE_UNDERGRADUATE; 
+				answer = d > 1194 ? '#800026' : 
+					d > 995 ? '#DB0026' : 
+					d > 796 ? '#E31A1C' : 
+					d > 597 ? '#FC4E2A' : 
+					d > 398 ? '#FD8D3C' : 
+					d > 199 ? '#FEB24C' :
+					d > 1 ? '#FED967' : 
+						'#FFEDA0'; 
 
+				styleReturn = {
+					fillColor : answer, 
+					weight : 1,
+					opacity : 1,
+					color: 'white', 
+					dashAray : '3', 
+					fillOpacity : 0.7
+				};
+				return styleReturn;
 			}
 
 		// let's add the Denver ACS data -- ##4 here
@@ -85,8 +103,7 @@
 			$.getJSON('./acs_denver_2021.geojson', function(data) {
 				//convert the file (data) into a layer
 				acsDenver2021Layer = L.geoJSON(data, 
-							       {style: style1 } 
-							      ).addTo(map); 
+							       {style: style1}).addTo(map); 
 
 				//move the map to the area of the data
 				map.panTo(acsDenver2021Layer.getBounds().getCenter()); 
