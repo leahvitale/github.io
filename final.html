@@ -90,7 +90,7 @@
           $("#FALL").fadeToggle();
         });
 
-    var map = L.map('map').setView([44.285927715770974, -110.62499281033023], 9);
+    var map = L.map('map').setView([44.285927715770974, -110.62499281033023], 8);
 		
 	  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   	maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -134,6 +134,8 @@
 
 	var marker10 = L.marker([44.52381944755065, -110.83988533554532]).addTo(map);
 
+	var marker11 = L.marker([43.86404894350442, -110.54868945398027]).addTo(map);
+
 	    
 	polygon1.bindPopup("<b>Location 1:</b> <br> This is my group's first research site."); 
 	
@@ -158,6 +160,8 @@
 	marker9.bindPopup("<b>Field Trip:</b><br> Lamar Buffalo Ranch - field campus for National Park Service and Yellowstone Forever Institute.<br> Behind this campus we were able to visit the historic (and off-the-grid) Rose Creek Wolf Reintroduction Pen."); 
 
 	marker10.bindPopup("<b>Hiking:</b><br> Grand Prismatic Spring Overlook via Fairy Falls Trailhead."); 
+
+	marker11.bindPopup("<b>Field Trip:</b><br> Oxbow Bend (Snake River) - observed North American beavers, North American river otters, pelicans, osprey, great blue heron, and mule deer."); 
 
     </script>
     
