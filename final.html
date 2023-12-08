@@ -48,16 +48,12 @@
       .caption { font-size: 14px; 
                 font-family: times; 
                 text-align: center; }
-	  .legend { 
-			line-heght: 18px; 
+	.legend { line-heght: 18px; 
 			color: #555; 
 			background-color: #eeeeee;  
 			padding: 2px; 
-			font-family: times;
-		}
-
-		.legend i { 
-			width: 18px; 
+			font-family: times;}
+	.legend i { width: 18px; 
 			height: 18px; 
 			float: left; 
 			margin-right: 8px; 
@@ -264,7 +260,8 @@
 	var legend = L.control({position: 'bottomright'}); 
 
 		legend.onAdd = function(map) { 
-
+		console.log('running the legend function')
+			
 			var div = L.DomUtil.create('div', 'info legend'); 
 				colors = ['#009999','#009900']; 
 				labels = ['Grand Teton National Park','Yellowstone National Park'];
