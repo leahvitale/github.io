@@ -206,13 +206,21 @@
 
 	$.getJSON('./GTNP.geojson', function(data) {
 				//convert the file (data) into a layer
-				GTNPlayer = L.geoJSON(data).addTo(map); 
+				GTNPlayer = L.geoJSON(data,
+				{style: style1, 
+				onEachFeature: function(feature, layer){
+				layer.bindPopup(feature.properties.UNIT_NAME);}
+				}).addTo(map); 
 		
 	layerControl.addOverlay(GTNPlayer, "Grand Teton National Park Boundary");})
 		
 	$.getJSON('./YNP.geojson', function(data) {
 				//convert the file (data) into a layer
-				YNPlayer = L.geoJSON(data).addTo(map); 
+				YNPlayer = L.geoJSON(data,
+				{style: style1, 
+				onEachFeature: function(feature, layer){
+				layer.bindPopup(feature.properties.UNIT_NAME);}
+				}).addTo(map); 
 				
 	layerControl.addOverlay(YNPlayer, "Yellowstone National Park Boundary"); })
 
