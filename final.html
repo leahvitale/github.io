@@ -217,6 +217,18 @@
 				};
 				return styleReturn; }
 
+			function style2(feature) { 
+
+				styleReturn = {
+					fillColor : answer, 
+					weight : 1,
+					opacity : 1,
+					color: 'white', 
+					dashAray : '3', 
+					fillOpacity : 0.7
+				};
+				return styleReturn; }
+
 	$.getJSON('./GTNP.geojson', function(data) {
 				//convert the file (data) into a layer
 				GTNPlayer = L.geoJSON(data,
