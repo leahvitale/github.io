@@ -206,6 +206,8 @@
 
 		//function to style my choropleth map
 			function style1(feature) { 
+				d = feature.properties.UNIT_NAME; 
+				answer = d = Grand Teton National Park ? '0080ff' ;
 
 				styleReturn = {
 					fillColor : answer, 
@@ -218,6 +220,8 @@
 				return styleReturn; }
 
 			function style2(feature) { 
+				g = feature.properties.UNIT_NAME; 
+				answer = g = Yellostone National Park ? '009900' ;
 
 				styleReturn = {
 					fillColor : answer, 
