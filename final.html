@@ -90,7 +90,7 @@
           $("#FALL").fadeToggle();
         });
 
-    var map = L.map('map').setView([44.285927715770974, -110.62499281033023], 8);
+    var map = L.map('map').setView([44.285927715770974, -110.62499281033023], 9);
 		
 	  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   	maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -132,6 +132,7 @@
 
 	var marker9 = L.marker([44.89558337578592, -110.23440671195479]).addTo(map);
 
+	var marker10 = L.marker([44.52381944755065, -110.83988533554532]).addTo(map);
 
 	    
 	polygon1.bindPopup("<b>Location 1:</b> <br> This is my group's first research site."); 
@@ -148,13 +149,15 @@
 	
 	marker5.bindPopup("<b>Field Trip:</b><br> Dunraven Pass - observed bison, coyote, and a grizzly bear."); 
 
-	marker6.bindPopup("<b>Field Trip:</b><br> Artists Point - viewing area for the Lower Falls of Yellowstone River"); 
+	marker6.bindPopup("<b>Field Trip:</b><br> Artists Point - viewing area for the Lower Falls of Yellowstone River."); 
 
-	marker7.bindPopup("<b>Hiking:</b><br> Wapiti Lake Trailhead - observed bison, birds, and a black bear"); 
+	marker7.bindPopup("<b>Hiking:</b><br> Wapiti Lake Trailhead - observed bison, birds, and a black bear."); 
 
 	marker8.bindPopup("<b>Field Trip:</b><br> Lamar Valley - observed wolves, bison, coyote, badgers, and osprey."); 
 
-	marker9.bindPopup("<b>Field Trip:</b><br> Lamar Buffalo Ranch - field campus for National Park Service and Yellowstone Forever Institute.<br> Behind this campus we were able to visit the historic (and off-the-grid) Rose Creek Wolf Reintroduction Pen"); 
+	marker9.bindPopup("<b>Field Trip:</b><br> Lamar Buffalo Ranch - field campus for National Park Service and Yellowstone Forever Institute.<br> Behind this campus we were able to visit the historic (and off-the-grid) Rose Creek Wolf Reintroduction Pen."); 
+
+	marker10.bindPopup("<b>Hiking:</b><br> Grand Prismatic Spring Overlook via Fairy Falls Trailhead."); 
 
     </script>
     
