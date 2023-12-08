@@ -90,7 +90,7 @@
           $("#FALL").fadeToggle();
         });
 
-    var map = L.map('map').setView([44.31884591857345, -110.62305361133478], 100);
+    var map = L.map('map').setView([44.31884591857345, -110.62305361133478], 5);
 		
 	  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   	maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -121,6 +121,9 @@
 	var marker3 = L.marker([43.764882, -110.750293]).addTo(map);
 
 	var marker4 = L.marker([43.763034, -110.747537]).addTo(map);
+
+	var marker5 = L.marker([44.95539522858304, -110.60093491589971]).addTo(map);
+
 	    
 	polygon1.bindPopup("<b>Location 1:</b> <br> This is my group's first research site."); 
 	
@@ -133,6 +136,8 @@
 	marker3.bindPopup("<b>Research:</b><br> My group researched Pika in Grand Teton National Park. <br> Zoom to see location 1."); 
 
 	marker4.bindPopup("<b>Research:</b><br> My group researched Pika in Grand Teton National Park. <br> Zoom to see location 2."); 
+
+	marker5.bindPopup("<b>Field Trip:</b><br> Blacktail pond - kettle ponds formed from glaciers retreating. Popular area for sighting bison and wolves."); 
 
     </script>
     
