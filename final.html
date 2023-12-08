@@ -207,7 +207,7 @@
 		//function to style my choropleth map
 			function style1(feature) { 
 				d = feature.properties.UNIT_CODE; 
-				answer = d = GRTE ? '0080ff'
+				answer = d = GRTE ? '#0080ff' ; 
 					
 				styleReturn = {
 					fillColor : answer, 
@@ -221,7 +221,7 @@
 
 			function style2(feature) { 
 				g = feature.properties.UNIT_CODE; 
-				answer = g = YELL ? '009900'
+				answer = g = YELL ? '#009900' ; 
 
 				styleReturn = {
 					fillColor : answer, 
