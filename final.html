@@ -12,6 +12,8 @@
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
   <style>
       body { width: 100%; }
       #container1 { width: 80%; 
@@ -24,9 +26,6 @@
               margin-right: 10px; 
               float: left; 
               width: 350px; }
-      #togglephoto { background-color: #e6ba7c; 
-                    font-family: times; 
-                    text-align: center; }
       #FALL { height: auto; 
              width: 300px;  
              border: 5px double #e6ba7c; 
@@ -57,11 +56,10 @@
       <p class="caption">Students at Lower Fall’s Point of the Yellowstone River.</p>
       <p class="caption">Photo by anonymous, 1 July 2023.</p>
       <p class="caption">MSU Denver students can discover field courses like this and others through the <a href="https://catalog.msudenver.edu/index.php"> MSU Undergraduate Course Catalog! </a> </p>
-      <button id="togglephoto">Toggle the photo on/off.</button>
      </div>
       </div>
-    <br>
-      <p>Principles of Wildlife Biology and Management (BIO 39AC) is a 3-credit summer course offered by Metropolitan State University of Denver. This course covers topics such as the history of wildlife management, techniques used in wildlife biology & management, habitats, wildlife adaptations, management practices, wildlife interactions, and healthy communities and ecosystems.</p> 
+      <p>Principles of Wildlife Biology and Management (BIO 39AC) is a summer course offered by Metropolitan State University of Denver. This course covers topics such as the history of wildlife management, techniques used in wildlife biology & management, habitats, wildlife adaptations, management practices, wildlife interactions, and healthy communities and ecosystems.</p> 
+       <p><div id="div_c1"><button id="click1">Click to see how many credits you can get from taking this course...</button></div>
       <p>There is a field portion of the course where students spend two weeks between Yellowstone National Park and Grand Teton National Park. The field portion of the course is an opportunity for students to learn from park employees and naturalist guides on how to apply the lecture topics in real life. This course is specifically designed for students who anticipate finding a career as a wildlife biologist or zoologist.</p>
     <br>
     <br>
@@ -79,17 +77,16 @@
     <div id="map"></div> 
 
     <script>
-      $(document).ready(function() {
-       // Toggle the photo on and off
-        $("#togglephoto").click(function() {
-          // run this when I click on this button 
-          console.log("clicked on the photo button");
-          $("#FALL").fadeToggle();
-        });
+
+      // Do this when we click on the click1 button
+      $("#click1").click(function() {
+        // run this when I click on this button
+        console.log("clicked on the 1st button");
+        $("#div_c1").html("3 upper division biology credits!");
+      }); 
 
     var map = L.map('map').setView([43.767266, -110.748420], 16);
 
-      }); //closing document ready
     </script>
     
   </body>
