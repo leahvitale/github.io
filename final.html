@@ -204,52 +204,16 @@
 	    
 	var layerControl = L.control.layers(baseMaps,null).addTo(map);
 
-		//function to style my choropleth map
-			function style1(feature) { 
-				d = feature.properties.UNIT_CODE; 
-				answer = d = GRTE ? '#0080ff' 
-					
-				styleReturn = {
-					fillColor : answer, 
-					weight : 1,
-					opacity : 1,
-					color: 'white', 
-					dashAray : '3', 
-					fillOpacity : 0.7
-				};
-				return styleReturn; }
-
-			function style2(feature) { 
-				g = feature.properties.UNIT_CODE; 
-				answer = g = YELL ? '#009900'  
-
-				styleReturn = {
-					fillColor : answer, 
-					weight : 1,
-					opacity : 1,
-					color: 'white', 
-					dashAray : '3', 
-					fillOpacity : 0.7
-				};
-				return styleReturn; }
-
+		
 	$.getJSON('./GTNP.geojson', function(data) {
 				//convert the file (data) into a layer
-				GTNPlayer = L.geoJSON(data,
-				{style: style1, 
-				onEachFeature: function(feature, layer){
-				layer.bindPopup(feature.properties.UNIT_CODE);}
-				}).addTo(map); 
+				GTNPlayer = L.geoJSON(data).addTo(map); 
 		
 	layerControl.addOverlay(GTNPlayer, "Grand Teton National Park Boundary");})
 		
 	$.getJSON('./YNP.geojson', function(data) {
 				//convert the file (data) into a layer
-				YNPlayer = L.geoJSON(data,
-				{style: style2, 
-				onEachFeature: function(feature, layer){
-				layer.bindPopup(feature.properties.UNIT_CODE);}
-				}).addTo(map); 
+				YNPlayer = L.geoJSON(data).addTo(map); 
 				
 	layerControl.addOverlay(YNPlayer, "Yellowstone National Park Boundary"); })
 
