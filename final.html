@@ -39,7 +39,7 @@
              padding: 5px; 
              display: block; 
              margin: auto; }
-      #map {height: 650px }
+      #map { height: 650px }
       #click1 { background-color: #e6ba7c; 
                font-family: times; 
                font-size: 20px; }
@@ -204,7 +204,36 @@
 	    
 	var layerControl = L.control.layers(baseMaps,null).addTo(map);
 
-		
+	function style1(feature) { 
+				d = feature.properties.UNIT_NAME; 
+				answer = d = Grand Teton National Park ? '#009999' ; 
+
+				styleReturn = {
+					fillColor : answer, 
+					weight : 1,
+					opacity : 1,
+					color: 'white', 
+					dashAray : '3', 
+					fillOpacity : 0.7
+				};
+				return styleReturn;
+			}
+
+	function style2(feature) { 
+				g = feature.properties.UNIT_NAME; 
+				answer = g = Yellowstone National Park ? '#009900' ; 
+
+				styleReturn = {
+					fillColor : answer, 
+					weight : 1,
+					opacity : 1,
+					color: 'white', 
+					dashAray : '3', 
+					fillOpacity : 0.7
+				};
+				return styleReturn;
+			}
+
 	$.getJSON('./GTNP.geojson', function(data) {
 				//convert the file (data) into a layer
 				GTNPlayer = L.geoJSON(data).addTo(map); 
@@ -218,6 +247,26 @@
 	layerControl.addOverlay(YNPlayer, "Yellowstone National Park Boundary"); })
 
 	});
+
+	var legend = L.control({position: 'bottomright'}); 
+
+		legend.onAdd = function(map) { 
+
+			var div = L.DomUtil.create('div', 'info legend'); 
+				colors = ['#009999','#009900']; 
+				labels = ['Grand Teton National Park','Yellowstone National Park'];
+
+			div.innerHTML = '<h2>Park Boundaries:</h2><br>'; 
+
+			//loop through our density intervals and generate a label with a colored square for each interval 
+
+			for (var i = 0; i < colors.length; i++) {
+				div.innerHTML += '<i style="background:' + colors[i] + '"></i> ' + labels[i] + '<br>';
+			}
+
+			return div; 
+
+		};
 		
 </script>
 
