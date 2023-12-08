@@ -204,12 +204,10 @@
 	    
 	var layerControl = L.control.layers(baseMaps,null).addTo(map);
 
-	function style1(feature) { 
-				d = feature.properties.UNIT_NAME; 
-				answer = d = Grand Teton National Park ? '#009999' ; 
+	function style1(feature) {  
 
 				styleReturn = {
-					fillColor : answer, 
+					fillColor : '#009999', 
 					weight : 1,
 					opacity : 1,
 					color: 'white', 
@@ -219,12 +217,10 @@
 				return styleReturn;
 			}
 
-	function style2(feature) { 
-				g = feature.properties.UNIT_NAME; 
-				answer = g = Yellowstone National Park ? '#009900' ; 
+	function style2(feature) {  
 
 				styleReturn = {
-					fillColor : answer, 
+					fillColor : '#009900', 
 					weight : 1,
 					opacity : 1,
 					color: 'white', 
