@@ -96,6 +96,28 @@
   	maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	  }).addTo(map);
 
+	    var polygon1 = L.polygon([
+		[43.764882, -110.750293], 
+		[43.764432, -110.751023], 
+		[43.764002, -110.750824],
+		[43.764072, -110.750089],
+		[43.764703, -110.749907],
+		[43.764843, -110.749987]
+	]).addTo(map);
+
+	var polygon2 = L.polygon([
+		[43.763034, -110.747537],
+		[43.762941, -110.747443], 
+		[43.762689, -110.747744], 
+		[43.762362, -110.747830], 
+		[43.762360, -110.747956], 
+		[43.762763, -110.747956]
+	]).addTo(map); 
+
+	polygon1.bindPopup("<b>Location 1:</b> <br> This is my group's first research site."); 
+	
+	polygon2.bindPopup("<b>Location 2:</b> <br> This is my group's second research site."); 
+
     </script>
     
   </body>
