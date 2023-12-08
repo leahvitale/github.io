@@ -204,6 +204,19 @@
 	    
 	var layerControl = L.control.layers(baseMaps,null).addTo(map);
 
+		//function to style my choropleth map
+			function style1(feature) { 
+
+				styleReturn = {
+					fillColor : answer, 
+					weight : 1,
+					opacity : 1,
+					color: 'white', 
+					dashAray : '3', 
+					fillOpacity : 0.7
+				};
+				return styleReturn; }
+
 	$.getJSON('./GTNP.geojson', function(data) {
 				//convert the file (data) into a layer
 				GTNPlayer = L.geoJSON(data,
@@ -217,7 +230,7 @@
 	$.getJSON('./YNP.geojson', function(data) {
 				//convert the file (data) into a layer
 				YNPlayer = L.geoJSON(data,
-				{style: style1, 
+				{style: style2, 
 				onEachFeature: function(feature, layer){
 				layer.bindPopup(feature.properties.UNIT_NAME);}
 				}).addTo(map); 
